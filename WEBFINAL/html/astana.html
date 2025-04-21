@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astana - Capital of Kazakhstan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Основные стили темной темы */
+        .dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-theme .btn-outline-light {
+            border-color: #e0e0e0;
+            color: #e0e0e0;
+        }
+        .header {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        /* Слайд-шоу фона для header */
+        .header-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slideAnimation 15s infinite; /* Продолжительность анимации */
+            z-index: -1;
+        }
+
+        /* Стили для кнопки */
+        .btn-custom {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        /* Анимация смены изображений */
+        @keyframes slideAnimation {
+            0% { background-image: url('https://cache.marriott.com/marriottassets/marriott/TSESI/tsesi-nur-sultan-area-1958-hor-clsc.jpg'); }
+            33% { background-image: url('https://avatars.mds.yandex.net/i?id=e1160da2d7042fc4bd53740d0335a05c_l-7042922-images-thumbs&n=13'); }
+            66% { background-image: url('https://cdn2.tu-tu.ru/image/pagetree_node_data/1/57779e8988e3d7eacb3d172547d36131/'); }
+            100% { background-image: url('https://avatars.mds.yandex.net/i?id=7ac31f10b28fc26f30fb8e5cde8e1c0d_l-6503967-images-thumbs&n=13'); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>About Me</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">City Portal</a>
+                <button id="themeToggle" class="btn btn-outline-light ms-2">🌞/🌚</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-slideshow"></div>
+        <h1>Astana</h1>
+        <p>The Modern Capital of Kazakhstan</p>
+        <a href="#about" class="btn btn-custom btn-lg">Learn More</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <h2>About Astana</h2>
+        <p>Astana, now known as Nur-Sultan, is the capital of Kazakhstan. Located in the center of the country, it is a political, cultural, and economic hub, known for its modern architecture and rapid development.</p>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="container mt-5">
+        <h2>Attractions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://sputnik.kz/img/1419/35/14193517_0:0:1920:1080_1920x0_80_0_0_605fd7c837e3dc979f6ce526f13fb934.jpg" class="img-fluid" alt="Baiterek Monument">
+                <h3>Baiterek</h3>
+                <p>A famous monument symbolizing a Kazakh legend about the tree of life.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Grand_Mosque_in_Astana%2C_Kazakhstan.jpg/1200px-Grand_Mosque_in_Astana%2C_Kazakhstan.jpg" class="img-fluid" alt="Nur Astana Mosque">
+                <h3>Nur Astana Mosque</h3>
+                <p>One of the largest mosques in Central Asia, located at the heart of the city.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://cdn.tripster.ru/thumbs2/b8dabc76-7ebc-11ed-8b51-eea3bc9c5b2f.1200x1000.jpeg" class="img-fluid" alt="Ak Orda Presidential Palace">
+                <h3>Ak Orda</h3>
+                <p>The official residence of the President of Kazakhstan, a symbol of statehood.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="container mt-5">
+        <h2>Photos of Astana</h2>
+        <p>Explore beautiful photos of Astana showcasing its stunning architecture and urban landscapes.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://s0.rbk.ru/v6_top_pics/media/img/5/94/754939102764945.jpg" class="img-fluid" alt="Astana View 1">
+            </div>
+            <div class="col-md-4">
+                <img src="https://avatars.mds.yandex.net/get-altay/11937297/2a0000018e14cfa8b8507bd77e88d5368330/orig" class="img-fluid" alt="Astana View 2">
+            </div>
+            <div class="col-md-4">
+                <img src="https://bogatyr.club/uploads/posts/2023-03/1677640864_bogatyr-club-p-astana-panorama-foni-krasivo-74.jpg" class="img-fluid" alt="Astana View 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="container mt-5">
+        <h2>Weather in Astana</h2>
+        <p>Astana experiences a continental climate with cold winters and warm summers. Check the latest weather updates for the city.</p>
+        <div id="weather-widget">
+            <!-- Embed weather widget or API here -->
+            <p>Weather details will be displayed here.</p>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container mt-5">
+        <h2>Videos about Astana</h2>
+        <div>
+            <h1>YouTube Search</h1>
+            <input type="text" id="searchInput" placeholder="Search for videos">
+            <button onclick="searchYouTube()">Search</button>
+            <div id="results"></div>
+        </div>
+        
+        
+        
+    </section>
+    <div id="weatherContainer" class="weather-info"></div>
+
+    <!-- Map Section -->
+    <section id="map" class="container mt-5">
+        <h2>Map of Astana</h2>
+        <p>Here is an interactive map showing the key landmarks and attractions in Astana.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Astana Tourism. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and JQuery -->
+    <script src="js/cityjs.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

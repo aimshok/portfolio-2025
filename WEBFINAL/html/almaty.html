@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almaty - Cultural Hub of Kazakhstan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Основные стили темной темы */
+        .dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-theme .btn-outline-light {
+            border-color: #e0e0e0;
+            color: #e0e0e0;
+        }
+        .header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Стили для слайдера изображений */
+        .header-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slideAnimation 15s infinite; /* Интервал смены изображений */
+            z-index: -1;
+        }
+
+        /* Стили кнопки */
+        .btn-custom {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        /* Анимация смены слайдов */
+        @keyframes slideAnimation {
+            0% { background-image: url('https://youtravel.me/upload/tours/37222/media/00b/q39j2z69sbqvlolkbk4aduhs0v0h1o4e.jpeg'); }
+            33% { background-image: url('https://a.d-cd.net/f0606ces-960.jpg'); }
+            66% { background-image: url('https://a.d-cd.net/a1195d5s-1920.jpg'); }
+            100% { background-image: url('https://static.tildacdn.com/tild3839-3039-4464-b163-616338343738/IMG_20200408_224640-.jpg'); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>About Me</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">City Portal</a>
+                <button id="themeToggle" class="btn btn-outline-light ms-2">🌞/🌚</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-slideshow"></div>
+        <h1>Almaty</h1>
+        <p>The Cultural Hub of Kazakhstan</p>
+        <a href="#about" class="btn btn-custom btn-lg">Learn More</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <h2>About Almaty</h2>
+        <p>Almaty is Kazakhstan's largest city and was once the capital. It is known for its vibrant cultural life, beautiful mountain backdrop, and rich history.</p>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="container mt-5">
+        <h2>Attractions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://cdn.getyourguide.com/img/tour/ec44e521b4ddffa8.jpeg/148.jpg" class="img-fluid" alt="Mountains">
+                <h3>Ile-Alatau National Park</h3>
+                <p>A popular destination for hiking and sightseeing in the mountains.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.gov.kz/uploads/2022/5/14/9b978b00b05c1fb6be70a2b7d8559198_original.239379.gif" class="img-fluid" alt="Museum">
+                <h3>Central State Museum</h3>
+                <p>The largest museum in Almaty, showcasing Kazakhstan's history and culture.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://kaz.tengrinews.kz/guide/img/slide2.jpg" class="img-fluid" alt="Medeo Ice Rink">
+                <h3>Medeo Ice Rink</h3>
+                <p>Famous high-altitude ice skating rink located in the mountains.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="container mt-5">
+        <h2>Photos of Almaty</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="https://c4.wallpaperflare.com/wallpaper/38/334/517/lakes-lake-almaty-kazakhstan-wallpaper-preview.jpg" class="img-fluid" alt="Almaty View 1"></div>
+            <div class="col-md-4"><img src="https://c4.wallpaperflare.com/wallpaper/915/986/417/big-almaty-lake-wallpaper-preview.jpg" class="img-fluid" alt="Almaty View 2"></div>
+            <div class="col-md-4"><img src="https://i.pinimg.com/originals/c9/0e/6a/c90e6a141f20de916a6eb3f6152a0e0e.jpg" class="img-fluid" alt="Almaty View 3"></div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="container mt-5">
+        <h2>Weather in Almaty</h2>
+        <p>Almaty has a mild continental climate with distinct seasons. Check the latest weather here.</p>
+        <div id="weather-widget"><p>Weather details will be displayed here.</p></div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container mt-5">
+        <h2>Videos about Almaty</h2>
+        <div>
+            <h1>YouTube Search</h1>
+            <input type="text" id="searchInput" placeholder="Search for videos">
+            <button onclick="searchYouTube()">Search</button>
+            <div id="results"></div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="container mt-5">
+        <h2>Map of Almaty</h2>
+        <p>Here is an interactive map of Almaty, showing key locations and attractions.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Almaty Tourism. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and JQuery -->
+    <script src="js/cityjs.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

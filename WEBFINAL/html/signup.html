@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signin.css"> <!-- Link to external CSS -->
+</head>
+<body class="light-mode" id="pageBody">
+    <!-- Sign Up Form -->
+    <section class="vh-100">
+        <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+            <form id="authForm" class="text-center" onsubmit="handleSignUp(event)">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid mb-4" alt="Sample image">
+                
+                <h3>Sign Up</h3>
+                <!-- Light/Dark Mode Toggle -->
+                <div class="form-check form-switch my-3">
+                    <input type="checkbox" class="form-check-input" id="themeToggle" onclick="toggleTheme()">
+                    <label class="form-check-label" for="themeToggle">Dark Mode</label>
+                </div>
+
+                <!-- Social Sign Up -->
+                <div class="d-flex justify-content-center mb-4">
+                    <button type="button" class="btn btn-primary mx-1"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button" class="btn btn-primary mx-1"><i class="fab fa-twitter"></i></button>
+                    <button type="button" class="btn btn-primary mx-1"><i class="fab fa-linkedin-in"></i></button>
+                </div>
+
+                <p class="fw-bold text-center mb-4">Or</p>
+                
+                <!-- Name, Email, Password, and Confirm Password Inputs -->
+                <div class="form-outline mb-3">
+                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required />
+                    <label class="form-label" for="nameInput">Full Name</label>
+                </div>
+                <div class="form-outline mb-3">
+                    <input type="email" id="emailInput" class="form-control" placeholder="Enter a valid email" required />
+                    <label class="form-label" for="emailInput">Email Address</label>
+                </div>
+                <div class="form-outline mb-3">
+                    <input type="password" id="passwordInput" class="form-control" placeholder="Enter password" required />
+                    <label class="form-label" for="passwordInput">Password</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" id="confirmPasswordInput" class="form-control" placeholder="Confirm password" required />
+                    <label class="form-label" for="confirmPasswordInput">Confirm Password</label>
+                </div>
+                
+                <!-- Group Selection -->
+                <div class="mb-4">
+                    <label for="filterSelect" class="form-label">Choose a Group:</label>
+                    <select id="filterSelect" class="form-select" required>
+                        <option value="all">SE-2325</option>
+                        <option value="category1">SE-2326</option>
+                        <option value="category2">SE-2327</option>
+                        <option value="category3">SE-2328</option>
+                    </select>
+                </div>
+                
+                <!-- Sign Up Button -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href="html/signin.html" class="link-danger">Sign In</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/signup.js"></script>
+
+</body>
+</html>

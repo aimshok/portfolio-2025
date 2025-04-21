@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shymkent - Historic City of Kazakhstan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Основные стили темной темы */
+        .dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-theme .btn-outline-light {
+            border-color: #e0e0e0;
+            color: #e0e0e0;
+        }
+        .header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Стили для слайдера изображений */
+        .header-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slideAnimation 15s infinite; /* Интервал смены изображений */
+            z-index: -1;
+        }
+
+        /* Стили кнопки */
+        .btn-custom {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        /* Анимация смены слайдов */
+        @keyframes slideAnimation {
+            0% { background-image: url('https://elitar.kz/wp-content/uploads/2022/10/so-vseh-koncov-sveta-v-8230-shymkent_635944ec20828.jpeg'); }
+            33% { background-image: url('https://a.d-cd.net/9897ac4s-960.jpg'); }
+            66% { background-image: url('https://avatars.mds.yandex.net/i?id=3795d0ce1467556d06095ec1ee6f89f9_l-5220865-images-thumbs&n=13'); }
+            100% { background-image: url('https://avatars.mds.yandex.net/i?id=f53c5503940458d8125a7b5b18a7d609_l-5232611-images-thumbs&n=13'); }
+        }
+        /* Анимация для кнопок */
+.btn-custom, .btn-primary {
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover, .btn-primary:hover {
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background-color: #007bff; /* Меняет цвет кнопки на синий */
+    color: #fff; /* Меняет цвет текста на белый */
+}
+
+.btn-custom:active, .btn-primary:active {
+    transform: scale(0.95); /* Немного уменьшает кнопку при нажатии */
+}
+/* Изначально кнопки скрыты и плавно появляются при скролле */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>About Me</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">City Portal</a>
+                <button id="themeToggle" class="btn btn-outline-light ms-2">🌞/🌚</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/about.html">About Me</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-slideshow"></div>
+        <h1>Shymkent</h1>
+        <p>The beautiful city of Kazakhstan</p>
+        <a href="#about" class="btn btn-custom btn-lg fade-in">Learn More</a>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <h2>About Shymkent</h2>
+        <p>Shymkent is one of Kazakhstan's oldest cities, with a rich history and significant cultural landmarks.</p>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="container mt-5">
+        <h2>Attractions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://pics.photographer.ru/nonstop/pics/pictures/445/445408.jpg" class="img-fluid" alt="Mausoleum">
+                <h3>Aisha Bibi Mausoleum</h3>
+                <p>An ancient mausoleum with unique architecture and cultural significance.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://avatars.mds.yandex.net/i?id=209011db3b170054066352e3f20c4575_l-8313736-images-thumbs&n=13" class="img-fluid" alt="Park">
+                <h3>Independence Park</h3>
+                <p>A large park in Shymkent for relaxation and recreation.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://ortcom.kz/cache/imagine/main_page_full/uploads/posts/638/833/e98/638833e9893f8047016271.jpg" class="img-fluid" alt="Zoo">
+                <h3>Shymkent Zoo</h3>
+                <p>The oldest zoo in Kazakhstan, home to many exotic animals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="container mt-5">
+        <h2>Photos of Shymkent</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="https://elitar.kz/wp-content/uploads/2022/10/so-vseh-koncov-sveta-v-8230-shymkent_635944ec20828.jpeg" class="img-fluid" alt="Shymkent View 1"></div>
+            <div class="col-md-4"><img src="https://www.gov.kz/uploads/2024/3/20/5f8609d89511ccd80d044dbb5fe8fff5_original.470266.jpeg" class="img-fluid" alt="Shymkent View 2"></div>
+            <div class="col-md-4"><img src="https://ak-sai.com/wp-content/uploads/s1200-3.jpg" class="img-fluid" alt="Shymkent View 3"></div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="container mt-5">
+        <h2>Weather in Shymkent</h2>
+        <p>Shymkent has a warm, continental climate. Check the latest weather here.</p>
+        <div id="weather-widget"><p>Weather details will be displayed here.</p></div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container mt-5">
+        <h2>Videos about Shymkent</h2>
+        <div>
+            <h1>YouTube Search</h1>
+            <input type="text" id="searchInput" placeholder="Search for videos">
+            <button onclick="searchYouTube()">Search</button>
+            <div id="results"></div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="container mt-5">
+        <h2>Map of Shymkent</h2>
+        <p>Interactive map showing key landmarks in Shymkent.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Shymkent Tourism. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and JQuery -->
+    <script src="js/cityjs.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

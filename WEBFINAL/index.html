@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Beautiful City</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <header>
+
+        
+    </header>
+    
+    
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Welcome to Our City!</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">City Portal</a>
+                <button id="themeToggle" class="btn btn-outline-light ms-2">🌞/🌚</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/profile.html">
+                                <i class="fas fa-user-circle fa-lg"></i> Profile
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/about.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/signup.html">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/signin.html">Sign In</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+    </header>
+    
+    <main class="container mt-5">
+        <h1 id="greeting" class="text-center">Hi, guest!</h1>
+        <div class="input-group mb-4">
+            <input type="text" id="nameInput" class="form-control" placeholder="Введите ваше имя">
+        </div>
+
+        <section class="mb-5">
+            <h2>About Our Country</h2>
+            <p>Our country has a rich history and many unique places worth visiting. From ancient buildings to modern attractions, there's plenty to see here.</p>
+        </section>
+
+
+        <section class="mb-5">
+            <h2>About Our City</h2>
+            <button id="chatbot-toggle">Чат-бот Гид</button>
+
+<!-- Окно чата -->
+<div id="chatbot-window" class="chatbot-hidden">
+    <div id="chatbot-header">
+        <span>Чат-бот Гид</span>
+        <button id="close-chatbot">✖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <input type="text" id="user-input" placeholder="Задайте вопрос..." autocomplete="off">
+    <button id="send-message">Отправить</button>
+</div>
+           
+            <section class="mb-5">
+    <div id="astanaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#astanaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Astana Slide 1"></button>
+            <button type="button" data-bs-target="#astanaCarousel" data-bs-slide-to="1" aria-label="Astana Slide 2"></button>
+            <button type="button" data-bs-target="#astanaCarousel" data-bs-slide-to="2" aria-label="Astana Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/astana.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=da9ed7f2baeb3bd189778ab7fbaaba253ec1f64c-5474035-images-thumbs&n=13" alt="Astana Slide 1" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="html/astana.html" class="text-decoration-none text-dark">Astana</a></h3>
+                                <p class="card-text">Astana, the capital city of Kazakhstan, is renowned for its futuristic architecture and vibrant cultural scene.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Founded:</strong> 1745</li>
+                                    <li><strong>Population:</strong> 1,500,000 people</li>
+                                    <li><strong>Main Language:</strong> Kazakh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/astana.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=aa136717ecad39144d2d62534cb9ee55948db3dd-10555891-images-thumbs&n=13" alt="Astana Slide 2" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="html/astana.html" class="text-decoration-none text-dark">Astana - Architectural Marvels</a></h3>
+                                <p class="card-text">Discover the stunning architectural landmarks that define Astana's skyline, blending tradition with modernity.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Notable Structures:</strong> Bayterek Tower, Khan Shatyr Entertainment Center</li>
+                                    <li><strong>Architectural Style:</strong> Futuristic, Contemporary</li>
+                                    <li><strong>Key Attractions:</strong> Nur Alem Pavilion, Palace of Peace and Reconciliation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/astana.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=cf5036ac78f0292c01dcb5a91f6945d338e069a7-10932765-images-thumbs&n=13" alt="Astana Slide 3" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="html/astana.html" class="text-decoration-none text-dark">Astana - Cultural Hub</a></h3>
+                                <p class="card-text">Experience the rich cultural heritage of Astana through its museums, theaters, and vibrant festivals.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Museums:</strong> National Museum of the Republic of Kazakhstan, Museum of the First President</li>
+                                    <li><strong>Theaters:</strong> Astana Opera, Nur-Astana Philharmonic Hall</li>
+                                    <li><strong>Festivals:</strong> Astana International Film Festival, White Bridge Music Festival</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#astanaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#astanaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <figcaption class="figure-caption text-center mt-2">A panoramic view of Astana</figcaption>
+</section>
+
+
+            
+<section class="mb-5">
+    <div id="almatyCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#almatyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Almaty Slide 1"></button>
+            <button type="button" data-bs-target="#almatyCarousel" data-bs-slide-to="1" aria-label="Almaty Slide 2"></button>
+            <button type="button" data-bs-target="#almatyCarousel" data-bs-slide-to="2" aria-label="Almaty Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/almaty.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=2634261dac064160fb95af6b1d3dd12e112ae26b-11003753-images-thumbs&n=13" alt="Almaty Slide 1" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/almaty.html" class="text-decoration-none text-dark">Almaty</a>
+                                </h3>
+                                <p class="card-text">Almaty, the largest city in Kazakhstan and its cultural hub.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Founded:</strong> 1854</li>
+                                    <li><strong>Population:</strong> 1,900,000 people</li>
+                                    <li><strong>Main Language:</strong> Kazakh</li>
+                                </ul>
+                                <a href="html/almaty.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/almaty.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=b615efbed8ee7fb291f0cfee4d3ba576d6f3c91d-12675760-images-thumbs&n=13" alt="Almaty Slide 2" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/almaty.html" class="text-decoration-none text-dark">Almaty - Cultural Center</a>
+                                </h3>
+                                <p class="card-text">Explore the rich culture and history that make Almaty a unique destination in Kazakhstan.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Museums:</strong> Central State Museum, Almaty History Museum</li>
+                                    <li><strong>Theaters:</strong> Abay Opera House, Almaty Drama Theater</li>
+                                    <li><strong>Festivals:</strong> Almaty Music Festival, International Book Fair</li>
+                                </ul>
+                                <a href="html/almaty.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/almaty.html">
+                            <img src="https://avatars.mds.yandex.net/i?id=0da601cdac99bb7f9c3d7a545a3808df25aefe26-5421557-images-thumbs&n=13" alt="Almaty Slide 3" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/almaty.html" class="text-decoration-none text-dark">Almaty - Modern Attractions</a>
+                                </h3>
+                                <p class="card-text">Experience the modern attractions and facilities that Almaty offers to both residents and visitors.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Shopping Centers:</strong> Dostyk Plaza, Mega Center</li>
+                                    <li><strong>Parks:</strong> Panfilov Park, First President Park</li>
+                                    <li><strong>Entertainment:</strong> Almaty Tower, Medeu Ice Skating Rink</li>
+                                </ul>
+                                <a href="html/almaty.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#almatyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#almatyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <figcaption class="figure-caption text-center mt-2">A panoramic view of Almaty</figcaption>
+</section>
+
+
+            
+<section class="mb-5">
+    <div id="shymkentCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#shymkentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Shymkent Slide 1"></button>
+            <button type="button" data-bs-target="#shymkentCarousel" data-bs-slide-to="1" aria-label="Shymkent Slide 2"></button>
+            <button type="button" data-bs-target="#shymkentCarousel" data-bs-slide-to="2" aria-label="Shymkent Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/shymkent.html">
+                            <img src="https://www.avanta55.ru/wp-content/uploads/2023/11/shymkent.jpg" alt="Shymkent Slide 1" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/shymkent.html" class="text-decoration-none text-dark">Shymkent</a>
+                                </h3>
+                                <p class="card-text">Shymkent, a city in the south of Kazakhstan, known for its vibrant culture and history.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Founded:</strong> 1465</li>
+                                    <li><strong>Population:</strong> 1,200,000 people</li>
+                                    <li><strong>Main Language:</strong> Kazakh</li>
+                                </ul>
+                                <a href="html/shymkent.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/shymkent.html">
+                            <img src="https://kompastour.com/useruploads/regions/region_9dc2ba20c0.jpg" alt="Shymkent Slide 2" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/shymkent.html" class="text-decoration-none text-dark">Shymkent - Cultural Hub</a>
+                                </h3>
+                                <p class="card-text">Explore the rich culture and history that make Shymkent a unique destination in Kazakhstan.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Museums:</strong> Regional Museum of Local History, Shymkent Museum of Art</li>
+                                    <li><strong>Theaters:</strong> Shymkent Drama Theater, Palace of Children's Creativity</li>
+                                    <li><strong>Festivals:</strong> Shymkent International Jazz Festival, Spring Flowers Festival</li>
+                                </ul>
+                                <a href="html/shymkent.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <a href="html/shymkent.html">
+                            <img src="https://cargo-china.kz/assets/images/route/shymkent.jpg" alt="Shymkent Slide 3" class="img-fluid rounded" style="width: 100%; height: auto;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="html/shymkent.html" class="text-decoration-none text-dark">Shymkent - Modern Attractions</a>
+                                </h3>
+                                <p class="card-text">Experience the modern attractions and facilities that Shymkent offers to both residents and visitors.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Shopping Centers:</strong> Mega Shymkent Mall, City Center Shymkent</li>
+                                    <li><strong>Parks:</strong> Central Park, Park of Glory</li>
+                                    <li><strong>Entertainment:</strong> Shymkent Water Park, Cinema Park</li>
+                                </ul>
+                                <a href="html/shymkent.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#shymkentCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#shymkentCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <figcaption class="figure-caption text-center mt-2">A panoramic view of Shymkent</figcaption>
+</section>
+
+
+        
+        <section class="mb-5">
+            <h3>Interesting Places to Visit</h3>
+            <div class="accordion" id="placesAccordion">
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMainSquare">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMainSquare" aria-expanded="true" aria-controls="collapseMainSquare">
+                            Main Square
+                        </button>
+                    </h2>
+                    <div id="collapseMainSquare" class="accordion-collapse collapse show" aria-labelledby="headingMainSquare" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            The Main Square is the heart of our city, featuring stunning architecture, vibrant street performances, and a bustling marketplace. It's the perfect spot to experience the local culture and enjoy leisurely walks.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHistoricalMuseum">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistoricalMuseum" aria-expanded="false" aria-controls="collapseHistoricalMuseum">
+                            Historical Museum
+                        </button>
+                    </h2>
+                    <div id="collapseHistoricalMuseum" class="accordion-collapse collapse" aria-labelledby="headingHistoricalMuseum" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            Our Historical Museum offers a deep dive into the rich heritage of the city, showcasing artifacts, exhibits, and interactive displays that highlight significant events and figures from our past.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCentralPark">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCentralPark" aria-expanded="false" aria-controls="collapseCentralPark">
+                            Central Park
+                        </button>
+                    </h2>
+                    <div id="collapseCentralPark" class="accordion-collapse collapse" aria-labelledby="headingCentralPark" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            Central Park is a green oasis in the middle of the city, offering beautiful walking trails, picnic areas, playgrounds, and scenic spots perfect for relaxation and recreation. It's a favorite destination for both locals and tourists.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRiverPromenade">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRiverPromenade" aria-expanded="false" aria-controls="collapseRiverPromenade">
+                            River Promenade
+                        </button>
+                    </h2>
+                    <div id="collapseRiverPromenade" class="accordion-collapse collapse" aria-labelledby="headingRiverPromenade" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            The River Promenade offers stunning views of the city's skyline along the waterfront. Visitors can enjoy leisurely strolls, boat rides, and various water activities. It's also lined with cafes and restaurants, making it an ideal spot for dining with a view.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCityZoo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCityZoo" aria-expanded="false" aria-controls="collapseCityZoo">
+                            City Zoo
+                        </button>
+                    </h2>
+                    <div id="collapseCityZoo" class="accordion-collapse collapse" aria-labelledby="headingCityZoo" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            The City Zoo is home to a diverse range of animal species from around the world. It's an educational and entertaining destination for families, offering interactive exhibits, animal shows, and conservation programs.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNationalBotanicalGarden">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNationalBotanicalGarden" aria-expanded="false" aria-controls="collapseNationalBotanicalGarden">
+                            National Botanical Garden
+                        </button>
+                    </h2>
+                    <div id="collapseNationalBotanicalGarden" class="accordion-collapse collapse" aria-labelledby="headingNationalBotanicalGarden" data-bs-parent="#placesAccordion">
+                        <div class="accordion-body">
+                            The National Botanical Garden showcases a vast collection of plant species, including rare and endangered varieties. Visitors can explore themed gardens, participate in guided tours, and enjoy peaceful surroundings perfect for photography and nature appreciation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="gallery">
+            <img src="https://avatars.mds.yandex.net/i?id=8f345f3d0eaf64450b5606082c9c1138_l-4954380-images-thumbs&n=13" alt="Фото 1">
+            <img src="https://avatars.mds.yandex.net/i?id=2dcd126dcd7c677be0e1dc655b9802d6817dc84d-12421984-images-thumbs&n=13" alt="Фото 2">
+            <img src="https://www.gov.kz/uploads/2022/9/17/592025ad8fc4549b16f11ca88d7ad107_original.1104903.jpeg" alt="Фото 3">
+        </div>
+        
+
+       
+        <section class="mb-5">
+            <h3>Leave a Review</h3>
+            <form id="reviewForm" action="#" method="post" onsubmit="return validateReviewForm()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <span id="nameError" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">Your City:</label>
+                    <input type="text" id="city" name="city" class="form-control" required>
+                    <span id="cityError" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback" class="form-label">Review:</label>
+                    <textarea id="feedback" name="feedback" rows="4" class="form-control" required></textarea>
+                    <span id="feedbackError" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg me-2">Submit</button>
+                <button type="button" class="btn btn-secondary btn-lg" onclick="resetForm()">Reset</button>
+            </form>
+        </section>
+        
+          
+    <div class="text-center mt-5">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscriptionModal">
+            Subscribe Now
+        </button>
+    </div>
+
+  
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+             
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subscriptionModalLabel">Join Our Newsletter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <form id="subscriptionForm">
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </div>
+                    </form>
+                    
+                    <div id="successMessage" class="alert alert-success mt-3" style="display: none;">Thank you for subscribing!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="rate-us" class="container my-5">
+        <h3 class="text-center">Rate Us</h3>
+        <div class="rating-container text-center">
+            <div class="stars" id="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="rating-feedback" class="feedback mt-3">Hover over the stars to rate</p>
+            <textarea id="rating-comment" class="form-control mt-3" placeholder="Leave a comment (optional)" rows="3"></textarea>
+            <button id="submit-rating" class="btn btn-primary mt-3">Submit Rating</button>
+        </div>
+    </section>
+    
+    <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/ru/163/astana/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Астана</a><a href="https://yandex.kz/maps/ru/163/astana/?ll=71.424433%2C51.148608&utm_medium=mapframe&utm_source=maps&z=14.73" style="color:#eee;font-size:12px;position:absolute;top:14px;">Астана — Яндекс Карты</a><iframe src="https://yandex.kz/map-widget/v1/?ll=71.424433%2C51.148608&z=14.73" width="1560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    
+   
+ 
+  
+    
+    
+    
+    </main>
+
+    <div class="text-center mb-5">
+        <div id="currentDateTime" class="fs-5"></div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 QBaktiar City Information Portal</p>
+    </footer>
+    
+    <script src="js/index.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

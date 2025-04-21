@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/profilecss.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="profile-card mx-auto text-center p-4 border rounded shadow">
+            <!-- Avatar -->
+            <img src="https://i.pinimg.com/736x/bb/7f/e9/bb7fe92f64690cd33bfa8282771e2a62.png" 
+                 id="avatar" 
+                 alt="Avatar" 
+                 class="rounded-circle mb-3" 
+                 style="width: 150px; height: 150px;">
+            <input type="file" 
+                   id="uploadAvatar" 
+                   accept="image/*" 
+                   class="form-control mb-3" 
+                   onchange="uploadAvatar(event)">
+
+            <!-- User Info -->
+            <h3 id="userName" class="mb-1">User Name</h3>
+            <p id="userEmail" class="text-muted">user@example.com</p>
+
+            <!-- Buttons -->
+            <div class="mt-4">
+                <button id="goToIndexButton" class="btn btn-primary btn-lg mb-2">Go to Index</button>
+                <button id="logoutButton" class="btn btn-danger btn-lg">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profilejs.js"></script>
+</body>
+</html>
